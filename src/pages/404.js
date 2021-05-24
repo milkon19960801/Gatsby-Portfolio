@@ -1,10 +1,13 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 export default function NotFound() {
   return (
-    <div>
-      <h2>404</h2>
-      <p>Sorry, that page dosen't exist</p>
-    </div>
+    <Layout>
+      <div>
+        <h2>404</h2>
+        <p>Sorry, that page dosen't exist</p>
+      </div>{" "}
+    </Layout>
   )
 }
