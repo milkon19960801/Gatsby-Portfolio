@@ -4,8 +4,9 @@ import Layout from "../../components/Layout"
 import * as styles from "../../styles/projects.module.css"
 
 export default function Projects({ data }) {
-  const projects = data.projects.nodes
   console.log(data)
+  const projects = data.projects.nodes
+  const { contact } = data.contact.siteMetadata
   return (
     <Layout>
       <div className={styles.portfolio}>
@@ -21,6 +22,7 @@ export default function Projects({ data }) {
             </Link>
           ))}
         </div>
+        <p>Like what you see? Email me att {contact} for a quote!</p>
       </div>
     </Layout>
   )
