@@ -5,7 +5,7 @@ import * as styles from "../../styles/projects.module.css"
 
 export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
-  console.log(projects)
+  console.log(data)
   return (
     <Layout>
       <div className={styles.portfolio}>
@@ -37,6 +37,11 @@ export const query = graphql`
           slug
         }
         id
+      }
+    }
+    site {
+      siteMetadata {
+        contact
       }
     }
   }
